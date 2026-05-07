@@ -17,6 +17,210 @@
         .btn-start { padding: 12px 30px; font-size: 1.1rem; cursor: pointer; background: #FF3B30; color: white; border: none; border-radius: 5px; font-weight: bold; }
         .btn-start:hover { background: #cc2f26; }
     </style>
+    <style>
+    body {
+        background: radial-gradient(circle at top, #1a002b, #05010a 70%);
+        color: #f5f5f5;
+        font-family: 'Courier New', monospace;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+    }
+
+    h1 {
+        margin-bottom: 5px;
+        font-size: 40px;
+        color: #00f7ff;
+        text-shadow:
+            0 0 5px #00f7ff,
+            0 0 10px #00f7ff,
+            0 0 20px #ff00ff;
+        letter-spacing: 3px;
+    }
+
+    p {
+        color: #ff66ff;
+        text-shadow: 0 0 5px #ff00ff;
+    }
+
+    .btn-init {
+        background: linear-gradient(90deg, #ff00ff, #00f7ff);
+        color: white;
+        border: 2px solid #00f7ff;
+        padding: 12px 35px;
+        font-size: 20px;
+        font-family: monospace;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        transition: 0.3s;
+        box-shadow:
+            0 0 10px #00f7ff,
+            0 0 20px #ff00ff;
+    }
+
+    .btn-init:hover {
+        transform: scale(1.05);
+        box-shadow:
+            0 0 20px #00f7ff,
+            0 0 40px #ff00ff;
+    }
+
+    .btn-init:disabled {
+        background: #333;
+        border-color: #666;
+        cursor: not-allowed;
+        box-shadow: none;
+    }
+
+    .status-panel {
+        margin-bottom: 25px;
+        padding: 15px 30px;
+        border-radius: 15px;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        width: 800px;
+        background: rgba(0, 0, 0, 0.5);
+        border: 2px solid #00f7ff;
+        box-shadow:
+            0 0 10px #00f7ff,
+            inset 0 0 15px rgba(0,247,255,0.3);
+        color: #00f7ff;
+        text-shadow: 0 0 10px #00f7ff;
+        backdrop-filter: blur(10px);
+    }
+
+    .dashboard {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .camera-container {
+        position: relative;
+        width: 640px;
+        height: 480px;
+    }
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 640px;
+        height: 480px;
+        border: 2px solid #00f7ff;
+        border-radius: 15px;
+        object-fit: fill;
+        box-shadow:
+            0 0 20px #00f7ff,
+            0 0 40px rgba(255,0,255,0.5);
+    }
+
+    canvas#overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 640px;
+        height: 480px;
+        pointer-events: none;
+        z-index: 9999;
+    }
+
+    .log-panel {
+        width: 300px;
+        height: 480px;
+        background: rgba(10, 10, 20, 0.7);
+        border: 2px solid #ff00ff;
+        border-radius: 15px;
+        padding: 10px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        backdrop-filter: blur(10px);
+        box-shadow:
+            0 0 15px #ff00ff;
+    }
+
+    .log-panel h3 {
+        margin-top: 0;
+        text-align: center;
+        border-bottom: 1px solid #ff00ff;
+        padding-bottom: 5px;
+        color: #ff00ff;
+        text-shadow: 0 0 10px #ff00ff;
+    }
+
+    .log-entry {
+        border: 2px solid #00f7ff;
+        border-radius: 10px;
+        padding: 5px;
+        background: rgba(0, 247, 255, 0.08);
+        animation: fadeIn 0.3s ease-in-out;
+        box-shadow:
+            0 0 10px rgba(0,247,255,0.5);
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px) scale(0.95);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
+    .log-entry img {
+        width: 100%;
+        border-radius: 6px;
+        border: 1px solid #00f7ff;
+    }
+
+    .log-entry p {
+        margin: 5px 0 0 0;
+        font-size: 12px;
+        color: #00f7ff;
+        text-align: center;
+        text-shadow: 0 0 5px #00f7ff;
+    }
+
+    .engineer-signature {
+        margin-top: 30px;
+        font-size: 14px;
+        color: #777;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .engineer-signature span {
+        color: #ff00ff;
+        font-weight: bold;
+        text-shadow:
+            0 0 5px #ff00ff,
+            0 0 15px #ff00ff;
+    }
+
+    /* Scrollbar Cyberpunk */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #111;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(#00f7ff, #ff00ff);
+        border-radius: 10px;
+    }
+</style>
 </head>
 <body>
 
