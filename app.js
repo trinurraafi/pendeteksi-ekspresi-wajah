@@ -11,10 +11,10 @@ const CONFIG = {
     
     // Batas keyakinan AI (0.45 = 45%). 
     // Jika AI terlalu sering salah tebak, naikkan angkanya (misal 0.60).
-    threshold: 0.90,
+    threshold: 0.60,
     
     // Batas untuk menghapus kotak deteksi yang menumpuk (Biarkan saja 0.4)
-    iouThreshold: 0.6
+    iouThreshold: 0.5
 };
 
 // ======================================================================
