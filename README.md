@@ -17,13 +17,14 @@ Cocok banget buat belajar AI, computer vision, atau sekadar iseng bikin project 
 - Klasifikasi ekspresi: Senyum & Marah
 - Jalan langsung dari webcam
 - Ringan dan bisa dijalankan di browser / local server
+- Dan Juga Di Handphone/Iphone
 
 ---
 
 ## 🧠 Cara Kerja
 
 1. Kamera nyala dan ambil frame video
-2. AI model (ONNX / TensorFlow / dll) baca wajah
+2. AI model (ONNX) baca wajah
 3. Model nentuin ekspresi:
    - 😄 Happy kalau wajah terlihat senyum
    - 😠 Angry kalau wajah terlihat tegang / marah
@@ -36,7 +37,6 @@ Cocok banget buat belajar AI, computer vision, atau sekadar iseng bikin project 
 - HTML, CSS, JavaScript
 - OpenCV / TensorFlow.js (opsional)
 - ONNX Model (hasil training dari Roboflow / dataset sendiri)
-- Webcam API
 
 ---
 
@@ -77,7 +77,20 @@ Tahapan training:
 2. Buka `index.html` di browser
    atau pakai local server (disarankan)
 3. Izinkan akses kamera
-4. Tampilkan ekspresi kamu 😆😡
+4. Tampilkan ekspresi kamu 😿😾
+
+---
+
+## 🌐 Deployment
+
+Project ini sudah kami deploy menggunakan **GitHub Pages** 🚀
+
+👉 kami mendeploy project ini di GitHub agar bisa diakses secara online melalui browser.
+
+Langkah deploy:
+- Upload project ke GitHub repository
+- Aktifkan GitHub Pages di settings
+- Jalankan dari branch `main`
 
 ---
 
@@ -96,6 +109,13 @@ Kalau mau upgrade, bisa banget:
 - Improve accuracy model
 - Tambah UI yang lebih keren
 - Deploy ke web hosting
+
+---
+
+## 👨‍💻 Dibuat oleh:
+- Tri Nur Raafi  
+- Ragga Hafidz Fianugra  
+- Ziddan Mulki Akbar
 
 ---
 
